@@ -1,6 +1,6 @@
 
-import cartimage from './../../../public/cart.png' 
-import menubar from "./../../../public/menu.png" 
+import cartimage from './../../assets/cart.png' 
+import menubar from "./../../assets/menu.png"
 
 export default function CartWidget() {
   return (

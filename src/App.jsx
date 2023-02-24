@@ -7,13 +7,16 @@ function App() {
     
     return (
       <>
-        <nav>
+        <nav className="navbar navbar-dark bg-primary navbar-expand-lg fixed-top">
+        <div className="container-fluid">
           <NavBar />
           <CartWidget />
+          </div>
         </nav> 
       <main>
-        <ItemListContainer contenido={"Acelera tu desarrollo con plantillas 10"} /> 
+        <ItemListContainer greeting={"Acelera tu desarrollo con plantillas 10"} /> 
       </main>
+      <a className="btn btn-success" href="#">Botón</a>
       </>
     )
   }
