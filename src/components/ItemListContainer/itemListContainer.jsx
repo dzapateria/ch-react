@@ -10,8 +10,8 @@ const ItemListContainer = ()=> {
 
   const [ items, setItems ] = useState([])
 
-  const test  = useParams() 
-  console.log( test )
+  const { categoryId }  = useParams() 
+  console.log( categoryId )
 
   const productosFiltrados = products.filter( (elemento)=> elemento.category === categoryId )
 
