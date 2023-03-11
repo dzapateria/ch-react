@@ -16,6 +16,10 @@ body{
     text-align: center;
  }
 
+ .container{ 
+   max-width: 1300px
+}
+
 .logo{
     max-width: 50px; 
 }

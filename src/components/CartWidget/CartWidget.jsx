@@ -1,12 +1,15 @@
 
-import cartimage from './../../assets/cart.png' 
+import { AiOutlineShoppingCart } from 'react-icons/ai'
 import menubar from "./../../assets/menu.png"
+import './CartWidget.css'
 
 export default function CartWidget() {
   return (
-    <div className="cartwidget">
-      <a href="#"><img src={cartimage} alt="" /> </a>
-     <a href="#"><img class="menubar" src={menubar} alt="" /> </a>
+    <div className="cartwidget"> 
+      <a href="#">   
+        <AiOutlineShoppingCart color="white" size="2em"/>   
+      </a>
+     <a href="#"><img className="menubar" src={menubar} alt="" /> </a>
      
     </div>
   )

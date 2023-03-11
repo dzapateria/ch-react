@@ -1,24 +1,26 @@
 
 import NavBar from './components/NavBar/NavBar'
-import ItemListContainer from './components/ItemListContainer/itemListContainer'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import CartWidget from './components/CartWidget/CartWidget'
 
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+
 function App() {
-    
-    return (
-      <>
+
+  return (
+    <BrowserRouter>
+      <Routes>
         <nav className="navbar navbar-dark bg-primary navbar-expand-lg fixed-top">
-          <div className="container-fluid">
+          <div className="container">
             <NavBar />
-            <CartWidget />
           </div>
-        </nav> 
-      <main>
-        <ItemListContainer greeting={"Acelera tu desarrollo con plantillas 10"} /> 
-      </main> 
-      </>
-    )
-  }
-  
-  export default App
-  
+        </nav>
+        <main>
+          <ItemListContainer />
+        </main>
+      </Routes>
+    </BrowserRouter>
+  )
+}
+
+export default App
