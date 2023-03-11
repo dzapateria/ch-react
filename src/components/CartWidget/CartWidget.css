@@ -1,2 +1,20 @@
  
  
+ .cartwidget{
+    position: relative;
+ }
+
+ .contador{
+    position: absolute;
+    top: -8px;
+    right: -12px;
+    background-color: red;
+    color: white;
+    border-radius: 15px;
+    padding: 3px 7px;
+    font-family: arial;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 14px;
+ }
+
