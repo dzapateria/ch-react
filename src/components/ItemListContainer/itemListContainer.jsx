@@ -5,38 +5,39 @@ import { products } from "../../productsMock"
 
 // Components
 import ItemList from "../ItemList/ItemList"
- 
-const ItemListContainer = ()=> { 
 
-  const [ items, setItems ] = useState([])
+const ItemListContainer = () => {
 
-  const { categoryId }  = useParams() 
-  console.log( categoryId )
+  const [items, setItems] = useState([])
 
-  const productosFiltrados = products.filter( (elemento)=> elemento.category === categoryId )
+  const { categoryId } = useParams()
 
-  console.log( productosFiltrados )
+  const productosFiltrados = products.filter((elemento) => elemento.category === categoryId)
 
-  useEffect( ()=> {
+  console.log(productosFiltrados)
+
+  useEffect(() => {
     // simulando un api
-      const productList = new Promise((resolve, reject)=>{
-      resolve( categoryId ? productosFiltrados : products  )
-  })
- 
-  productList
-  .then( (res)=>{ setItems( res ) } )
-  .catch( (error)=>{ console.log ( error)} )
+    const productList = new Promise((resolve, reject) => {
+      resolve(categoryId ? productosFiltrados : products)
+    })
+
+    productList
+      .then((res) => { setItems(res) })
+      .catch((error) => { console.log(error) })
 
   }, [categoryId])
- 
+
 
   return (
-  <main>
-    <h2>Estoy en itemListContainer</h2>
-      <ItemList items={items} />
-  </main>
+    <div className="container">
+      <div className="row">
+        <h2 className="text-center">Nuestros animalitos te esperan</h2>
+        <ItemList items={items} />
+      </div>
+    </div>
   )
 }
-  
- 
+
+
 export default ItemListContainer;

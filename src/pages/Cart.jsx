@@ -1,6 +1,9 @@
 const Cart = ()=> {
     return(
-    <h1>Carrito de compras</h1>
+        <div className="container text-center">
+
+            <h1>Carrito de compras</h1> 
+        </div>
     )
 }
 

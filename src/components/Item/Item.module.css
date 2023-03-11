@@ -1,11 +1,10 @@
-img{
-    max-width: 120px;
+.imgcard{
+    max-height: 190px;
+    object-fit: none;
+    object-position: 50% 30%;
 }
 
-.productbox {
-    border: 1px solid rgb(148, 4, 4);
+.productbox { 
+    width: 18rem
 }
-
-.productbox  h1{
-    color: red;
-}
+ 
